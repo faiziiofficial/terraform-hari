@@ -23,5 +23,5 @@ jobs:
         run: |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} 'sudo yum install docker git  -y && sudo systemctl start docker && rm -rf deqode-hari || true'
-          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} 'git clone https://github.com/faiziiofficial/deqode-hari.git && cd deqode-hari && bash auto.sh'
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} 'git clone https://github.com/faiziiofficial/terraform-hari.git && cd terraform-hari  && bash auto.sh'
           
